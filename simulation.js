@@ -1,6 +1,10 @@
 const canvas = document.getElementById('simulation');
 const ctx = canvas.getContext('2d');
 
+// Reduce the canvas size
+canvas.width = 400; // Adjust as needed
+canvas.height = 300; // Adjust as needed
+
 class Ball {
     constructor(x, y, radius) {
         this.x = x;
@@ -45,6 +49,12 @@ function gameLoop() {
     ball.update();
     ball.draw();
     requestAnimationFrame(gameLoop);
+
+    // Loop the animation by resetting the ball's position
+    if (ball.x > canvas.width + ball.radius) {
+        ball.x = -ball.radius;
+        ball.velocity_y = -10; // Reset vertical velocity
+    }
 }
 
 gameLoop();
