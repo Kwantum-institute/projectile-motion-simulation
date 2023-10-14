@@ -2,8 +2,8 @@ const canvas = document.getElementById('simulation');
 const ctx = canvas.getContext('2d');
 
 // Reduce the canvas size
-canvas.width = 400; // Adjust as needed
-canvas.height = 300; // Adjust as needed
+canvas.width = 600; // Adjust as needed
+canvas.height = 450; // Adjust as needed
 
 class Ball {
     constructor(x, y, radius) {
