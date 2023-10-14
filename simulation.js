@@ -32,7 +32,7 @@ class Ball {
         ctx.fillRect(0, canvas.height - 50, canvas.width, 50);
 
         // Draw the ball
-        ctx.fillStyle = 'white';
+        ctx.fillStyle = 'black';
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         ctx.fill();
